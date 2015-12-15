@@ -1,10 +1,10 @@
 default:
     autoload: [ %paths.base%/test/acceptance/contexts ]
-    # suites:
-    #     test_google_features:
-    #         paths: [ %paths.base%/test/acceptance/features ]
-            #contexts: [TestGoogleContext]
+    suites:
+        test_google_features:
+            paths: [ %paths.base%/test/acceptance/features ]
+            contexts: [ TestGoogleContext ]
     extensions:
         Behat\MinkExtension:
-            base_url: https://google.com            
+            base_url: https://google.com
             selenium2: ~

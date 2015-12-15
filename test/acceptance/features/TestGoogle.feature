@@ -4,6 +4,7 @@ Feature: Test Google
 
   Scenario: Search for how google works
     Given I am on "/"
-    When I fill in "search form" with "how google works"
-    And I press "searchButton"
-    Then I should see "agile software development"
+    When I fill in "q" with "how google works"
+    And I press "btnG"
+    Then I wait for the next step
+    Then I should see "How Google Works"
